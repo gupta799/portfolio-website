@@ -13,6 +13,12 @@ describe("portfolio regression suite", () => {
 
     expect(screen.getByRole("heading", { level: 1, name: /swetha sri pinnamaneni/i })).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 2, name: /scientist profile/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/pinnamaneni/"
+    );
+    expect(screen.queryByText(/toswethasri@gmail.com/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/248-657-0635/i)).not.toBeInTheDocument();
   });
 
   it("renders professional route directly", () => {
@@ -39,13 +45,17 @@ describe("portfolio regression suite", () => {
     expect(screen.getByRole("heading", { name: /bachelor of science in biology/i })).toBeInTheDocument();
   });
 
-  it("renders contact route with email and linkedin actions", () => {
+  it("renders contact route with linkedin-only action", () => {
     renderAt("/contact");
 
-    expect(screen.getByRole("link", { name: /email/i })).toHaveAttribute("href", "mailto:toswethasri@gmail.com");
+    expect(screen.getByRole("heading", { level: 2, name: /connect on linkedin/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /linkedin/i })).toHaveAttribute(
       "href",
       "https://www.linkedin.com/in/pinnamaneni/"
     );
+    expect(screen.queryByRole("link", { name: /email/i })).not.toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /call/i })).not.toBeInTheDocument();
+    expect(screen.queryByText(/toswethasri@gmail.com/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/248-657-0635/i)).not.toBeInTheDocument();
   });
 });

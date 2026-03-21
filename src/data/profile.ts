@@ -1,12 +1,9 @@
 export const profile = {
   name: "Swetha Sri Pinnamaneni",
   headline: "Biotechnology Scientist (Small Molecules/QC)",
-  location: "Madison, WI",
   summary:
     "Biotechnology Scientist (Small Molecules/QC) with experience in cGMP analytical testing and end-to-end sample prep to analysis to reporting. Skilled in HPLC/Empower, UV/Vis, data review, SOP/report documentation, and microbiology methods (PCR, transformation, biofilm/AMP assays).",
   contacts: {
-    phone: "248-657-0635",
-    email: "toswethasri@gmail.com",
     linkedin: "linkedin.com/in/pinnamaneni",
     linkedinUrl: "https://www.linkedin.com/in/pinnamaneni/"
   },

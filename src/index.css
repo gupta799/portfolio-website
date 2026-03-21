@@ -87,6 +87,7 @@ a {
 }
 
 .hero {
+  position: relative;
   padding: 5rem 0 2.2rem;
 }
 
@@ -144,6 +145,81 @@ h1 {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+}
+
+.lab-visual {
+  position: relative;
+  margin-top: 1.4rem;
+  padding: 1rem 1rem 1.2rem;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  background: linear-gradient(140deg, rgba(34, 54, 79, 0.75), rgba(18, 30, 47, 0.65));
+  overflow: hidden;
+}
+
+.lab-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(0.4px);
+  opacity: 0.45;
+  animation: drift 6s ease-in-out infinite;
+}
+
+.orb-a {
+  width: 76px;
+  height: 76px;
+  top: -18px;
+  left: -16px;
+  background: radial-gradient(circle, rgba(79, 194, 255, 0.9), rgba(79, 194, 255, 0));
+}
+
+.orb-b {
+  width: 82px;
+  height: 82px;
+  right: 28%;
+  top: -28px;
+  background: radial-gradient(circle, rgba(106, 255, 206, 0.75), rgba(106, 255, 206, 0));
+  animation-delay: 1.8s;
+}
+
+.orb-c {
+  width: 64px;
+  height: 64px;
+  right: -14px;
+  bottom: -16px;
+  background: radial-gradient(circle, rgba(255, 183, 132, 0.75), rgba(255, 183, 132, 0));
+  animation-delay: 0.9s;
+}
+
+.workflow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.workflow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(114, 214, 255, 0.9), transparent);
+  animation: travel 3s linear infinite;
+}
+
+.workflow span {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d2e5fb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  padding: 0.46rem 0.6rem;
+  background: rgba(9, 20, 34, 0.65);
 }
 
 .hero-note {
@@ -255,10 +331,21 @@ h1 {
 }
 
 .timeline-item {
+  position: relative;
   padding: 1.2rem;
   border-radius: 20px;
   border: 1px solid var(--stroke);
   background: linear-gradient(160deg, rgba(27, 42, 64, 0.74), rgba(17, 29, 46, 0.64));
+  overflow: hidden;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 38%, rgba(121, 232, 255, 0.18) 50%, transparent 62%);
+  transform: translateX(-140%);
+  animation: sweep 5s linear infinite;
 }
 
 .timeline-period {
@@ -347,6 +434,39 @@ h1 {
   }
 }
 
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(10px) translateX(5px);
+  }
+}
+
+@keyframes travel {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+
+@keyframes sweep {
+  to {
+    transform: translateX(140%);
+  }
+}
+
 @media (max-width: 900px) {
   .metric-grid,
   .work-grid {
@@ -355,6 +475,14 @@ h1 {
 
   .hero {
     padding-top: 4rem;
+  }
+
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+
+  .workflow::before {
+    display: none;
   }
 }
 
@@ -374,5 +502,19 @@ h1 {
     width: 100%;
     justify-content: space-between;
     gap: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .lab-orb,
+  .workflow::before,
+  .timeline-item::before {
+    animation: none;
   }
 }

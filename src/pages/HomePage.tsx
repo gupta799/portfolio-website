@@ -9,11 +9,20 @@ export function HomePage() {
         <h1 className="reveal">{profile.name}</h1>
         <p className="hero-headline reveal">{profile.headline}</p>
         <p className="hero-intro reveal">{profile.summary}</p>
-        <div className="contact-line reveal">
-          <span>{profile.contacts.phone}</span>
-          <span>{profile.contacts.email}</span>
-          <span>{profile.contacts.linkedin}</span>
-          <span>{profile.location}</span>
+        <div className="hero-actions reveal">
+          <a className="btn ghost" href={profile.contacts.linkedinUrl} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
+        </div>
+        <div className="lab-visual reveal" aria-hidden="true">
+          <div className="lab-orb orb-a" />
+          <div className="lab-orb orb-b" />
+          <div className="lab-orb orb-c" />
+          <div className="workflow">
+            <span>Sample Prep</span>
+            <span>Analysis</span>
+            <span>Reporting</span>
+          </div>
         </div>
       </section>
 
