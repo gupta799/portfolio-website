@@ -1,11 +1,17 @@
 import portraitSrc from "../assets/swetha-portrait.jpeg";
 import { profile } from "../data/profile";
 import { SectionTitle } from "../components/SectionTitle";
-
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 export function HomePage() {
   return (
     <>
       <section className="hero">
+        <DotLottieReact
+          src="https://lottie.host/6977e0ce-d63c-4ec8-b2cd-cad501882f04/l5XLPcRVXO.lottie"
+          loop
+          autoplay
+          className="lottie-hero-bg"
+        />
         <div className="hero-top">
             <div className="hero-copy">
               <p className="hero-kicker reveal">Biotechnology Scientist</p>

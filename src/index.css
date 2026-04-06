@@ -66,6 +66,8 @@ h2 {
 }
 
 .page-shell {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
@@ -153,19 +155,28 @@ h2 {
   font-weight: 600;
 }
 
+.lottie-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
 .hero {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
   padding: clamp(2.6rem, 5vw, 4.2rem) 0 1.5rem;
 }
 
-.hero-layout {
-  display: grid;
-  gap: 1.4rem;
-}
-
 .hero-top {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: 0.8rem;
