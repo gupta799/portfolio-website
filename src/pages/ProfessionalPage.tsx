@@ -13,6 +13,11 @@ export function ProfessionalPage() {
             <h4>
               {item.company} | {item.location}
             </h4>
+            <div className="role-focus-tags">
+              {profile.professionalProofCards.map((card) => (
+                <span key={card.label} className="role-focus-tag">{card.label}</span>
+              ))}
+            </div>
             <ul>
               {item.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>

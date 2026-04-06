@@ -1,8 +1,65 @@
 export const profile = {
   name: "Swetha Sri Pinnamaneni",
-  headline: "Biotechnology Scientist (Small Molecules/QC)",
+  headline: "Scientist | Analytical Testing, Data Analysis, Regulated Reporting",
   summary:
-    "Biotechnology Scientist (Small Molecules/QC) with experience in cGMP analytical testing and end-to-end sample prep to analysis to reporting. Skilled in HPLC/Empower, UV/Vis, data review, SOP/report documentation, and microbiology methods (PCR, transformation, biofilm/AMP assays).",
+    "Scientist with experience in cGMP analytical testing, release and stability work, secondary data review, report documentation, and data analysis using Excel and GraphPad Prism. Hands-on with HPLC/Empower, UV/Vis, SoloVPE, IEF, and SOP-based laboratory workflows.",
+  portrait: {
+    alt: "Portrait of Swetha Sri Pinnamaneni"
+  },
+  heroPills: [
+    {
+      label: "Analytical testing",
+      value: "Release, stability, and method-based laboratory work"
+    },
+    {
+      label: "Data analysis",
+      value: "Excel, GraphPad Prism, result review, and trend comparison"
+    },
+    {
+      label: "Documentation",
+      value: "SOP-driven records, technical reports, and QA-ready packages"
+    }
+  ],
+  thermoFisherWorkflow: [
+    {
+      title: "Review prior results",
+      detail: "Compare current results with earlier timepoints and expected ranges."
+    },
+    {
+      title: "Check method records",
+      detail: "Review calculations, preparation records, and SOP-required documentation."
+    },
+    {
+      title: "Prepare QA package",
+      detail: "Resolve discrepancies and assemble study records for QA review."
+    }
+  ],
+  proofHighlights: [
+    {
+      label: "Statistical Analysis",
+      title: "GraphPad Prism analysis",
+      detail:
+        "Use GraphPad Prism for t-tests, ANOVA, result comparison, and figure preparation."
+    },
+    {
+      label: "Excel Data Handling",
+      title: "Excel-based data review",
+      detail:
+        "Use Excel for tables, summaries, pivot tables, comparisons, and routine review tracking."
+    },
+    {
+      label: "Data Review",
+      title: "Secondary review work",
+      detail:
+        "Review samples, standards, calculations, and record packages before final QA review."
+    },
+    {
+      label: "Scientific Reporting",
+      title: "Technical report writing",
+      detail:
+        "Write summaries, conclusions, and supporting documentation for technical reports."
+    }
+  ],
   contacts: {
     linkedin: "linkedin.com/in/pinnamaneni",
     linkedinUrl: "https://www.linkedin.com/in/pinnamaneni/"
@@ -23,12 +80,39 @@ export const profile = {
       ]
     }
   ],
+  professionalProofCards: [
+    {
+      label: "Secondary Data Review",
+      title: "Secondary review of analytical results",
+      detail:
+        "Reviewed analytical results against prior timepoints, method requirements, and SOPs before QA review."
+    },
+    {
+      label: "Release & Stability",
+      title: "Commercial release and stability testing",
+      detail:
+        "Supported release, stability, quality control, and method validation work with documented acceptance-criteria checks."
+    },
+    {
+      label: "BIOVIA Documentation",
+      title: "BIOVIA Workbook documentation",
+      detail:
+        "Wrote technical study records and reports in BIOVIA Workbook and helped resolve documentation discrepancies."
+    },
+    {
+      label: "Methods & Instrumentation",
+      title: "Methods and instrumentation in use",
+      detail:
+        "Executed testing using CEX-HPLC, IEF, SoloVPE, UV/Vis, color/clarity, pH, and related methods."
+    }
+  ],
   researchExperience: [
     {
       company: "The Ohio State University",
       location: "Columbus, OH",
       role: "Undergraduate Research Assistant",
       period: "June 2022 - May 2024",
+      tags: ["Molecular Biology", "Microbiology", "Biofilm Studies", "GraphPad Prism", "Manuscript Support"],
       bullets: [
         "Designed and executed molecular cloning, bacterial transformation, and PCR assays in Bordetella pertussis, generating recombinant constructs across four bacterial strains to support biofilm and antimicrobial resistance studies.",
         "Standardized an electroporation-competent cell preparation SOP adopted for weekly transformations, improving throughput while maintaining high transformation efficiency.",
@@ -86,6 +170,28 @@ export const profile = {
       items: ["GLP", "GMP", "cGMP", "BSL-2 protocols", "ICH/USP/JP aligned testing"]
     }
   ],
+  analyticalSkills: {
+    tags: ["GraphPad Prism", "Microsoft Excel", "Data Review", "Scientific Reporting"],
+    title: "Data Analysis & Reporting",
+    proficiencies: [
+      {
+        title: "Statistical analysis",
+        detail: "GraphPad Prism for t-tests, ANOVA, experimental comparison, and figure preparation."
+      },
+      {
+        title: "Excel data handling",
+        detail: "Microsoft Excel for data manipulation, pivot tables, summaries, and review of analytical datasets."
+      },
+      {
+        title: "Data review and validation",
+        detail: "Secondary review of solutions, samples, standards, calculations, and reporting packages."
+      },
+      {
+        title: "Scientific reporting",
+        detail: "Writing structured reports, conclusions, and supporting documentation from analytical results."
+      }
+    ]
+  },
   education: {
     school: "The Ohio State University",
     location: "Columbus, OH",
@@ -99,6 +205,16 @@ export const profile = {
       "Genetics",
       "Immunology"
     ]
+  },
+  footer: {
+    title: "Education & Contact",
+    summary:
+      "Biology graduate and scientist with experience in analytical testing, data analysis, documentation, and reporting in regulated laboratory environments.",
+    educationTitle: "Education",
+    courseworkTitle: "Relevant coursework",
+    contactTitle: "Professional profile",
+    contactBlurb:
+      "Connect on LinkedIn for scientist roles involving analytical testing, data review, documentation, and reporting."
   },
   additionalResearchHighlights: [
     "Designed and executed molecular cloning experiments using restriction enzymes, ligation, and bacterial transformation for Bordetella pertussis research, achieving a 20% increase in assay accuracy.",

@@ -13,23 +13,19 @@ export function ResearchPage() {
             <h4>
               {item.company} | {item.location}
             </h4>
+            <div className="role-focus-tags">
+              {item.tags.map((tag) => (
+                <span key={tag} className="role-focus-tag">{tag}</span>
+              ))}
+            </div>
             <ul>
-              {item.bullets.map((bullet) => (
+              {[...item.bullets, ...profile.additionalResearchHighlights].map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
           </article>
         ))}
       </div>
-
-      <SectionTitle eyebrow="Additional Highlights" title="Selected Research Outcomes" />
-      <article className="timeline-item reveal">
-        <ul>
-          {profile.additionalResearchHighlights.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </article>
     </section>
   );
 }
